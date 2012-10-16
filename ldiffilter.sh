@@ -1,11 +1,15 @@
 #!/bin/sh
 
+# Copyright (c) 2012 Peter Dinges <pdinges@acm.org>
+#
+# See LICENSE for licensing terms.
+
 if [ -z "$1" ]; then
 	echo "Only print entries of an LDIF file that contain a certain pattern."
 	echo
 	echo "Usage: $0 REGEX < LDIF_FILE"
 	echo "where REGEX is an AWK regular expression that describes the"
-	echo "pattern which must occur in an entry."
+	echo "pattern that must occur in an entry."
 	echo
 	exit 1
 fi

@@ -2,12 +2,16 @@
 
 # Convert an OpenLDAP .schema file to LDIF
 
+# Copyright (c) 2012 Peter Dinges <pdinges@acm.org>
+#
+# See LICENSE for licensing terms.
+
 if [ -z "$1" ]; then
 	echo "Convert an OpenLDAP schema file to LDIF and print it to stdout."
 	echo
 	echo "Usage: $0 FILE"
 	echo "where FILE is the name of an OpenLDAP schema file."
-	echo "The file extension must be .schema to get a correct output."
+	echo "The file extension must be .schema to get valid output."
 	echo
 	exit 1
 fi
