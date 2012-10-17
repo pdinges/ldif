@@ -109,6 +109,5 @@ the open-source [MIT License][mit-license].
 [ldif]: http://en.wikipedia.org/wiki/LDIF "LDAP Data Interchange Format"
 [openldap]: http://openldap.org "OpenLDAP LDAP Server"
 [openldap-dynamic-config]: http://www.openldap.org/doc/admin24/slapdconf2.html
-[libnss-ldap]: http://wiki.debian.org/LDAP/NSS "Using an LDAP server
-for serving Linux information databases"
+[libnss-ldap]: http://wiki.debian.org/LDAP/NSS "Using an LDAP server for serving Linux information databases"
 [mit-license]: http://opensource.org/licenses/mit-license.php
