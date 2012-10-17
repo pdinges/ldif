@@ -6,19 +6,21 @@
 #
 # See LICENSE for licensing terms.
 
-while IFS=: read user uid gid cn homeDirectory loginShell
+while IFS=: read user pass uid gid cn homeDirectory loginShell
 do
-        cat <<-EOF
-        dn: uid=${user},ou=people,o=yomiko
-        objectClass: account
-        objectClass: posixAccount
-        uid: ${user}
-        cn: ${cn:-not set}
-        uidNumber: ${uid}
-        gidNumber: ${gid}
-        homeDirectory: ${homeDirectory}
-        loginShell: ${loginShell}
-        ${cn:-#} cn: description: ${cn}
+	# Note that these lines _have_ to be indented with a TAB.
+	# Otherwise, the here-document will not recognize its delimiter.
+	cat <<-EOF
+	dn: uid=${user},ou=people,o=mydomain
+	objectClass: account
+	objectClass: posixAccount
+	uid: ${user}
+	cn: ${cn:-not set}
+	uidNumber: ${uid}
+	gidNumber: ${gid}
+	homeDirectory: ${homeDirectory}
+	loginShell: ${loginShell}
+	${cn:-#} cn: description: ${cn}
 
-        EOF
+	EOF
 done
